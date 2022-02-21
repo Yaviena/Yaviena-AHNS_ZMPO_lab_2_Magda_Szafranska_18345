@@ -4,7 +4,7 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Usuń zadanie</h1>
+<h1 class="display-4">Usuń zadanie</h1>
 
 <h3>Czy na pewno chcesz usunąć to zadanie?</h3>
 <div>
@@ -25,7 +25,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="submit" value="Usuń" class="btn btn-danger" /> |
-        <a asp-action="Index">Wróć do listy zadań</a>
+        <input type="submit" value="Usuń" class="btn btn-danger" />
+        <a class="btn btn-dark" asp-action="Index">Wróć do listy zadań</a>
     </form>
 </div>

@@ -1,4 +1,5 @@
 using MagdaSzafranska_TaskManager.Models;
+using MagdaSzafranska_TaskManager.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,8 @@ namespace MagdaSzafranska_TaskManager
             services.AddControllersWithViews();
             services.AddDbContext<TaskManagerContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("TaskManagerDatabase")));
+
+            services.AddTransient<ITaskRepository, TaskRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
